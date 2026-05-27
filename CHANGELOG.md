@@ -1,3 +1,7 @@
+## Unreleased
+
+* **Fix**: `ScrollableTrimViewer` auto-scroll no longer engages on iOS 26 due to a drag-update cancel race with iOS's continuous zero-delta events. Only cancel the timer when leaving the trigger zone and only restart it when no timer is currently active.
+
 ## 5.0.0
 
 Got rid of the `flutter_ffmpeg` package and now uses a **native video trimmer** (Android and iOS)! 🎉
